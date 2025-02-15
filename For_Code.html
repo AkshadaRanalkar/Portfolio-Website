@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="For_Code.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+</head>
+
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"></a>
+
+        <nav class="navbar">
+            <a href="Home.html" style="--i:1" class="active">Home</a>
+            <a href="About.html" style="--i:2">About</a>
+            <a href="Skills.html" style="--i:3">Skills</a>
+            <a href="Projects.html" style="--i:4">Projects</a>
+            <a href="Portfolio.html" style="--i:4">Portfolio</a>
+            <a href="Contact.html" style="--i:5">Contact</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header class="header1">
+        <h1>🚀 My Coding Projects</h1>
+        <p>Explore my C, C++, and Java projects below!</p>
+    </header>
+
+    <section id="projects">
+        <h2>🔹 GitHub Projects</h2>
+
+        <div class="project-card">
+            <h3>Sorting Algorithm (C++)</h3>
+            <p>Implemented QuickSort and MergeSort in C++ for efficient sorting.</p>
+            <div class="center-container">
+                <a href="https://github.com/AkshadaRanalkar/Sorting-Algorithm" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Java OOP Project</h3>
+            <p>A Java-based object-oriented program demonstrating design patterns.</p>
+            <div class="center-container">
+                <a href="https://github.com/AkshadaRanalkar/Java-OOP-Project" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>🔹 Code Snippets</h2>
+
+        <h3>C++ QuickSort Example</h3>
+        <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high];
+    int i = (low - 1);
+
+    for (int j = low; j < high; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i + 1], arr[high]);
+    return (i + 1);
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+int main() {
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    quickSort(arr, 0, n - 1);
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) cout << arr[i] << " ";
+}
+        </code></pre>
+
+        <h3>Java OOP Example</h3>
+        <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    void display() {
+        System.out.println("Brand: " + brand + ", Speed: " + speed + "km/h");
+    }
+
+    public static void main(String[] args) {
+        Car car1 = new Car("Tesla", 200);
+        car1.display();
+    }
+}
+        </code></pre>
+
+        <h3>C File Handling Example</h3>
+        <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    file = fopen("example.txt", "w");
+    
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    
+    fprintf(file, "Hello, this is a file handling example.");
+    fclose(file);
+    
+    printf("File written successfully!\n");
+    return 0;
+}
+        </code></pre>
+    </section>
+
+    <section id="gist">
+        <h2>🔹 Embedded GitHub Gist</h2>
+        <p>Check out my detailed implementations on GitHub Gist:</p>
+        
+        <h3>🔸 C++ QuickSort Implementation</h3>
+        <script src="https://gist.github.com/yourusername/gist-id-cpp.js"></script>
+
+        <h3>🔸 Java OOP Example</h3>
+        <script src="https://gist.github.com/yourusername/gist-id-java.js"></script>
+
+        <h3>🔸 C File Handling</h3>
+        <script src="https://gist.github.com/yourusername/gist-id-c.js"></script>
+    </section>
+
+    <div class="last-text">
+        <p>Developed with love by Akshada Ranalkar © 2025</p>
+    </div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+
+</body>
+</html>
